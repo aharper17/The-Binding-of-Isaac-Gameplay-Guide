@@ -1,0 +1,311 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Binding Of Isaac: Gameplay Guide</title>
+<link href="jquery-mobile/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="styles/custom.css" rel="stylesheet" type="text/css">
+<link rel="apple-touch-icon" href="image/iconios.jpg" />
+<link rel="apple-touch-startup-image" href="image/splashios.jpg" />
+
+<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function getPath() 
+{
+   var str = location.pathname;
+   var i = str.lastIndexOf('/');
+   return str.substring(0,i+1);
+}
+
+
+function loadXMLDoc(filename)
+{
+   if (window.XMLHttpRequest)
+   {
+      xhttp=new XMLHttpRequest();
+   }
+   else // code for IE5 and IE6
+   {
+      xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   filename=getPath() + filename;
+   xhttp.open("GET",filename,false);
+   xhttp.send();
+   return xhttp.responseXML;
+}
+</script>
+</head> 
+<body> 
+
+<div id="page" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b">
+    
+	  <div class="logo"><img src="images/isaac_main.jpg" width="300" height="96" alt=""/></div>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview" data-theme="c">
+			<li><a href="#items">ITEMS</a></li>
+            <li><a href="#characters">CHARACTERS</a></li>
+			<li><a href="#rooms">ROOMS</a></li>
+			<li><a href="#floors">FLOORS</a></li>
+            <li><a href="#score">HIGH SCORES</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" data-theme="b">
+		<h4>Binding Of Isaac Gameplay Guide &copy; 2015</h4>
+	</div>
+</div>
+
+<div id="items" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<h1>ITEMS</h1>
+	</div>
+	<div data-role="content"> 
+	  <h3>ITEM LIST - ACTIVATABLE</h3>
+      <br>
+      <div class="logo"><img src="images/anarchist_cookbook.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>ANARCHIST COOKBOOK</h3>
+		<p>A simple white book with a circled capital A (the symbol for anarchism) painted on it. </p>
+		<p>Randomly drops 6 Troll Bombs around the current room.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/the_bean.png" width="100" height="96" alt="" align="left"/></div>
+        <h3>THE BEAN</h3>
+		<p>A small brown bean.</p>
+		<p>Upon use, releases gas that poisons any enemies within close range (1 square in all directions).</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/bobs_rotten_head.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>BOB'S ROTTEN HEAD</h3>
+		<p>The fly-ridden, rotting green head of Sloth, who is also known as Bob. It appears to have something similar to a maggot in one of the eye sockets.</p>
+		<p>Upon activation, Isaac holds the item above his head and throws it in the cardinal direction chosen. Upon detonation, the item acts like an IPECAC shot and poisons enemies. The item can also destroy rocks and, as with any bomb, damage Isaac. The damage for the explosion.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/the_bible.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>THE BIBLE</h3>
+		<p>The Christian scriptures, containing 66 books of the New and Old Testament.</p>
+		<p>Upon activation, the player grows angel wings and gains the ability to fly for that room. Using the Bible on Mom or Mom's Heart/It Lives will result in an instant kill.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/the_dice_.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>THE D6</h3>
+		<p>A single six-sided die, red in color with black spots indicating the number associated with each side.</p>
+		<p>Upon activation, any Items in the current room will be 're-rolled' and turned into another item that corresponds with that room's Item Pool.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/yum_heart.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>YUM HEART</h3>
+		<p>A stereotypical heart, with a large bite taken out of it.</p>
+		<p>Upon activation, the player will have 1 empty heart container restored. </p>
+        <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+	</div>
+	<div data-role="footer" data-theme="b">
+		<h4>Binding Of Isaac Gameplay Guide &copy; 2015</h4>
+	</div>
+</div>
+
+
+
+<div id="characters" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<h1>CHARACTERS</h1>
+	</div>
+	<div data-role="content">	
+		<h3>CHARACTERS</h3>
+      <br>
+      <div class="logo"><img src="images/isaac_character.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>Isaac</h3>
+		<p>Isaac is the titular character in The Binding of Isaac and The Binding of Isaac: Rebirth, and the first available character in both. Issac's stats are simple, and he is considered the base of all characters.</p>
+		<p>Isaac starts with no activated item, but after beating The Womb with Blue Baby, Isaac gains The Dice.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/maggy_character.png" width="100" height="96" alt="" align="left"/></div>
+        <h3>Magdalene</h3>
+		<p>Magdalene, sometimes known as Maggy, is an unlockable character in The Binding of Isaac.</p>
+		<p>She is unlocked by having seven heart containers of maximum health at any one time in a playthrough (Soul Hearts do not count, however, the temporary health boost from the XI Strength tarot card does.)</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/cain_character.png" width="100" height="96" alt="" align="left"/></div>
+        <h3>Cain</h3>
+		<p>Cain is an unlockable character in The Binding of Isaac. He is unlocked by having a total of 55 coins at any one time in a playthrough (not just attaining 55 or more coins in a playthrough).</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/judas_character.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>Judas</h3>
+		<p>Judas is an unlockable character in The Binding of Isaac. He is unlocked by completing The Womb for the first time.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/eve_character.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>Eve</h3>
+		<p>Eve is the sixth unlockable character in The Binding of Isaac. She is unlocked by making two or more seals with the devil in one playthrough.</p>
+        <p>When she is in the Whore of Babylon form, her attack is multiplied (x3) and a screen will appear saying, "What a horrible night to have a curse..."</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/blue_baby_character.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>??? (Blue Baby)</h3>
+		<p>???, also known as The Blue Baby, is an unlockable character in The Binding of Isaac. He is unlocked by completing the full game 10 times, after which Isaac will find him locked in a chest during the ending cutscene.</p>
+        <p>Blue Baby is unique in that his health is made entirely of Soul Hearts and cannot be expanded with Heart Containers. This makes Soul Hearts the only source of replenishing health available to Blue Baby.</p>
+        <br>
+        <br>
+        <div class="logo"><img src="images/samson_character.png" width="100" height="96" alt="" align="left"/></div>
+      <h3>Samson</h3>
+		<p>Samson is a character added in the expansion The Binding of Isaac: Wrath of the Lamb. He is unlocked by skipping two Treasure Rooms (you can walk in but you can't touch the treasure) and killing Mom in one playthrough.</p>
+        <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+	</div>
+	<div data-role="footer" data-theme="b">
+		<h4>Binding Of Isaac Gameplay Guide &copy; 2015</h4>
+	</div>
+</div>
+
+<div id="rooms" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<h1>ROOMS</h1>
+	</div>
+	<div data-role="content">	
+		<h3>Treasure Rooms</h3>
+        <br>
+        <div class="logo"><img src="images/treasure_room.png" width="100" height="96" alt="" align="left"/></div>
+        <div class="logo"><img src="images/treasure_room_closed.png" width="100" height="96" alt="" align="left"/></div>
+		<p>The Treasure Room (also known as the Item Room) is a room without Monsters that contains an Item on a pedestal. All items in the Treasure Room draw from the Treasure Room Item Pool. Therefore, items from other rooms (Devil Room, Challenge Room, Angel Room, etc.) cannot be found, unless they are in multiple pools.<br><br>It requires a key to access. An exception is The Basement 1/The Cellar 1, which does not. <br>The Basement/Cellar XL does require a key for both item rooms, however.</p>
+        <br>
+        <div class="logo"><img src="images/treasure_room_inside.jpg" width="200" height="100" alt="" align="left"/></div>
+        <br><br><br><br><br><br>
+        <h3>Shop Rooms</h3>
+        <br>
+        <div class="logo"><img src="images/normal_door.png" width="100" height="96" alt="" align="left"/></div>
+        <div class="logo"><img src="images/shop_door_closed.png" width="100" height="96" alt="" align="left"/></div>
+		<p>In a Shop, players can buy between two and five Items from Greed, who is in a noose. There is a chance that any item in the store will be 50% off. This is indicated by the price being red. Prices are:<br><br>
+        <li>3¢ for a regular heart. 2 at a discounted price.<br></li>
+		<li>5¢ for any other pick up (bombs, keys, soul hearts, pills, and cards). 3 when the price is discounted.<br></li>
+		<li>15¢ for an activated or collectible item. 7 when the item is discounted.<br><br></li>
+The shop always requires a key to enter. If the Secret Room is adjacent to it, it can also be accessed by bombing the wall between them. The Hermit card will take the player straight to the shop. The Hermit card also opens the door so the player can exit if they do not possess a key.</p>
+        <br>
+        <div class="logo"><img src="images/shop_room_inside.jpg" width="200" height="100" alt="" align="left"/></div>
+        <br><br><br><br><br><br>
+        <h3>Secret Rooms</h3>
+        <br>
+        <div class="logo"><img src="images/secret_room_door.png" width="100" height="96" alt="" align="left"/></div>
+        <p>The Secret Room typically contains no enemies and 3-9 Coins (usually pennies, with slight chances for nickels and dimes), a slot machine, or an item. The "sin" mini-boss Greed will sometimes appear in a secret room instead - The Compass will show if he resides there (this is impossible in levels before The Depths or Necropolis, at which point all floors have a 50% chance of containing him inside).
+<br><br>
+In the Secret Room, the track Respite plays in the background.
+<br><br>
+Secret room can contain:
+<br>
+<li>3 random Coins</li>
+<li>6 random Coins</li>
+<li>9 random Coins</li>
+<li>Slot Machine</li>
+<li>Fortune Telling Machine</li>
+<li>Greed or Super Greed</li></p>
+        <div class="logo"><img src="images/secret_room_inside.jpg" width="200" height="100" alt="" align="left"/></div>
+        <br><br><br><br><br><br>
+        <h3>Boss Rooms</h3>
+        <br>
+        <div class="logo"><img src="images/boss_door.png" width="100" height="96" alt="" align="left"/></div>
+		<p>The Boss Room is a room where the current floor's boss is fought, and the boss must be defeated in order to progress to the next floor (unless Isaac is teleported to the I AM ERROR room or uses the We Need To Go Deeper! item).
+<br><br>
+It is located on every floor, all the way up to Sheol and The Chest.
+<br><br>
+The room has a frame made out of bones and the room symbol and top of the door frame is a skull.
+
+</p>
+        <div class="logo"><img src="images/boss_room_inside.jpg" width="200" height="100" alt="" align="left"/></div>
+        <br><br><br><br><br><br>
+        <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+	</div>
+	<div data-role="footer" data-theme="b">
+	  <h4>Binding Of Isaac Gameplay Guide &copy; 2015</h4>
+	</div>
+</div>
+<div data-role="page" id="floors" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<h1>FLOORS</h1>
+	</div>
+  <div data-role="content">	
+    <p>Floors in the Binding Of Isaac are considered as 'Chapters' because each floor is randomised and has it's own 'story.'</p>
+    <h3>Chapters</h3>
+    <h3>Basement</h3>
+    <br>
+    <div class="logo"><img src="images/basement.jpg" width="200" height="100" alt="" align="left"/></div>
+    <br><br><br><br><br><br>
+    <p>The basement is the first floor (besides the Cellar) in the Binding of Isaac. Sometimes the Basement can be an XL floor and very rarely have an arcade. The basement has a treasure room and will not require a key when opening. The basement is the smallest floor in the game.</p>
+    <p><h3>Caves</h3>
+    <br>
+    <div class="logo"><img src="images/caves.jpg" width="200" height="100" alt="" align="left"/></div>
+    <br><br><br><br><br><br>
+    The caves is the second floor in the Binding of Isaac. Sometimes the Caves can be an XL floor and can have an arcade. The caves has a treasure room and will require a key when opening. The caves has harder boss battles.</p>
+    <p><h3>Depths</h3>
+    <br>
+    <div class="logo"><img src="images/depths.jpg" width="200" height="100" alt="" align="left"/></div>
+    <br><br><br><br><br><br>
+    The depths is the third floor in the Binding of Isaac. Sometimes the Depths can be an XL floor and can have an arcade. The depths has a treasure room and will require a key when opening. The depths has harder boss battles.</p>
+    <p><h3>Womb</h3>
+    <br>
+    <div class="logo"><img src="images/womb.jpg" width="200" height="100" alt="" align="left"/></div>
+    <br><br><br><br><br><br>
+    The Womb is the fourth floor in the Binding of Isaac. Sometimes the Womb can be an XL floor and can not have an arcade. The womb does not have a treasure room. The womb has harder boss battles and will require you to verse 'It Lives!'.</p>
+    <p><h3>Cathedral</h3>
+    <br>
+    <div class="logo"><img src="images/cathedral.jpg" width="200" height="100" alt="" align="left"/></div>
+    <br><br><br><br><br><br>
+    The Cathedral is the fifth floor in the Binding of Isaac. Sometimes the Cathedral can be an XL floor and can not have an arcade. The cathedral does not have a treasure room. The Cathedral requires you to defeat Isaac as the boss.</p>
+    <p><h3>Chest</h3>
+    <br>
+    <div class="logo"><img src="images/chest.jpg" width="200" height="100" alt="" align="left"/></div>
+    <br><br><br><br><br><br>
+    <br    <p>The Chest is the sixth floor in the Binding of Isaac. Sometimes the Chest can be an XL floor and can not have an arcade. The Chest has no treasure room but has chests in the first room that give you items and will require a key when opening. The Chest is the final floor and will require you to defeat ??? (Blue Baby) as the final boss battle. has harder boss battles.</p>
+require a key when opening. The Chest is the final floor and will require you to defeat ??? (Blue Baby) as the final boss battle.</p>
+	</div>
+    <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+	<div data-role="footer" data-theme="b">
+		<h4>Binding Of Isaac Gameplay Guide &copy; 2015</h4>
+	</div>
+    </div>
+
+<div data-role="page" id="score" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<h1>SCORE</h1>
+	</div>
+    
+  <form id="theQuiz" method="post">
+     <script type="text/javascript">
+		   var xmlDoc=loadXMLDoc("score.xml");
+		   counter=5;
+		   x=xmlDoc.getElementsByTagName("person").length;
+		   var items = xmlDoc.getElementsByTagName('person');
+		   document.write('<h3>Hi Scores</h3>');
+		   for (i=0;i<x;i++)
+           {
+              thisitem= items[i];
+			  
+			  //Start Score
+			  person_score = thisitem.getElementsByTagName("score")[0].textContent; // W3C
+			  document.write('<p>Score = ' + person_score + '</p>');
+			  firstname = thisitem.getElementsByTagName("firstname")[0].textContent; // W3C
+			  document.write('by ' + firstname);
+			  lastname = thisitem.getElementsByTagName("lastname")[0].textContent; // W3C
+			  document.write(' ' + lastname);
+			  date = thisitem.getElementsByTagName("date")[0].textContent; // W3C
+			  document.write(' <p>Scored on  ' + date);
+			  document.write('<hr>');
+			 
+	
+			  //End Score
+            }  
+
+		  
+		</script>
+  </form>
+  <div data-role="content">
+<p></p>
+	</div>
+    <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+	<div data-role="footer" data-theme="b">
+		<h4>Binding Of Isaac Gameplay Guide &copy; 2015</h4>
+	</div>
+</div>
+
+
+</body>
+</html>
